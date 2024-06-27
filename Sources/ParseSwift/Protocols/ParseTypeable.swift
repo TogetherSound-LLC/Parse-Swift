@@ -14,7 +14,8 @@ import Foundation
 public protocol ParseTypeable: Codable,
                                Equatable,
                                CustomDebugStringConvertible,
-                               CustomStringConvertible {}
+                               CustomStringConvertible,
+                               Sendable {}
 
 // MARK: CustomDebugStringConvertible
 extension ParseTypeable {

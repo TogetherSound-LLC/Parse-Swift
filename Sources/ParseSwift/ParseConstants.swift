@@ -44,7 +44,7 @@ enum Method: String {
 /**
  The types of Parse Hook Triggers available.
  */
-public enum ParseHookTriggerType: String, Codable {
+public enum ParseHookTriggerType: String, Codable, Sendable {
     /// Occurs before login of a `ParseUser`.
     case beforeLogin
     /// Occurs after login of a `ParseUser`.

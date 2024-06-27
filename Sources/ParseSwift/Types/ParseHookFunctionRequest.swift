@@ -14,7 +14,7 @@ import Foundation
  use the primary key in server-side applications where the key is kept secure and not
  exposed to the public.
  */
-public struct ParseHookFunctionRequest<U: ParseCloudUser, P: ParseHookParametable>: ParseHookRequestable {
+public struct ParseHookFunctionRequest<U: ParseCloudUser, P: ParseHookParametable & Sendable>: ParseHookRequestable {
     public typealias UsertType = U
     public var primaryKey: Bool?
     public var user: U?

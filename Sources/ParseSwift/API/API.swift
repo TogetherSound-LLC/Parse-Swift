@@ -139,7 +139,7 @@ public struct API {
     public typealias Options = Set<API.Option>
 
     /// Options available to send to Parse Server.
-    public enum Option: Hashable {
+    public enum Option: Hashable, Sendable {
 
         /// Use the primaryKey/masterKey if it was provided during initial configuraration.
         case usePrimaryKey
@@ -164,7 +164,7 @@ public struct API {
         case tags([String: String])
         /// Add context.
         /// - warning: Requires Parse Server 5.0.0+.
-        case context(Encodable)
+        case context(Encodable & Sendable)
         /// The caching policy to use for a specific http request. Determines when to
         /// return a response from the cache. See Apple's
         /// [documentation](https://developer.apple.com/documentation/foundation/url_loading_system/accessing_cached_data)
